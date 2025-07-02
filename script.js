@@ -1,6 +1,6 @@
 const movieFetchId = "elephantsdream";
 const movieUrl = "elephantsdream_teaser.mp4"
-const movieSizeInBytes = 355856562;
+const movieSizeInBytes = 30639218;
 const makeOfflineBtn = document.querySelector("#makeOfflineBtn");
 const makeOnlineOnlyBtn = document.querySelector("#makeOnlineOnlyBtn");
 const cacheName = "offlineMovies";
