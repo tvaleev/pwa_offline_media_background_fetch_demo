@@ -62,6 +62,7 @@ async function queryForMovieCacheStatus() {
 }
 
 async function makeOfflineClicked() {
+  console.log("makeOfflineClicked");
   showSuccess(false);
   showError(null);
   setLoadingPercentage(0);
@@ -74,6 +75,7 @@ async function makeOfflineClicked() {
 }
 
 async function makeOnlineOnlyClicked() {
+  console.log("makeOnlineOnlyClicked");
   try {
     const result = await deleteMovieFromCache();
   } catch (error) {
