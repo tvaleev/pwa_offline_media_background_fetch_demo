@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="manifest" href="/manifest.json" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+	</head>
+	
+	<body>
+    <div class="jumbotron">
+      <h1 class="display-4">PWA Offline Media Test with Background Fetch</h1>
+      <p class="lead">This is a PWA that supports offline media playback via <a href="https://developers.google.com/web/updates/2018/12/background-fetch">Background Fetch</a>.</p>
+      <p class="lead">
+        Background fetch provides a resilient experience for large downloads: if the user closes the PWA while the movie is downloading, it will be resumed on next load, users can pause or cancel the download, and download progress can be shown to the user. Try try it out:
+      </p>
+      <ol>
+        <li>Click "Make available offline" button.</li>
+        <li>While it's downloading, try closing and reopening the page. After a brief pause (~30s), the download will resume. 😎</li>
+        <li>Wait for the download to complete.</li>
+        <li>Go offline.</li>
+        <li>Refresh the page.</li>
+        <li>Click Play on the video. Even though you're offline, the video will still play. 😎</li>
+      </ol>
+      <hr class="my-4">
+
+      <div class="row">
+        
+        <div class="col">
+          <div class="embed-responsive embed-responsive-4by3" style="max-width: 700px">
+            <video controls class="embed-responsive-item" poster="https://judahtemp.b-cdn.net/bigbuckbunny-poster.jpg" preload="none">
+              
+            </video>
+          </div>
+        </div>
+        
+        <div class="col">
+          <button class="btn btn-primary btn-lg" href="#" role="button" id="makeOfflineBtn">
+            <span class="spinner-border" role="status" style="display: none;">
+              <span class="sr-only">Loading...</span>
+            </span>
+            <span class="label">
+              Make video available offline
+            </span>
+          </button>
+          <p id="offline-in-progress" class="text-info" style="display: none;">
+            This can take a few minutes depending on the speed of your internet connection. Please wait...
+          </p>
+
+          <div id="err" class="text-danger display-4" style="display: none;">
+
+          </div>
+
+          <div id="success" class="text-success display-4" style="display: none;">
+            ✓ Video is available offline
+            <br />
+            <button class="btn btn-link" id="makeOnlineOnlyBtn">
+              Make it online-only
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>    
+	</body>
+	
+	
+</html>

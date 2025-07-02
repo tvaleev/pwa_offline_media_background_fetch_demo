@@ -1,0 +1,16 @@
+{
+  "name": "Offline Media Test",
+  "short_name": "Sync",
+  "start_url": "https://tvaleev.github.io/pwa_offline_media_background_fetch_demo",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4285F4",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
