@@ -1,7 +1,7 @@
 // Update 'version' if you need to refresh the cache
 const version = "pwaCacheTest";
 const offlineMoviesCache = "offlineMovies";
-const offlineUrl = "/offline.html";
+const offlineUrl = "offline.html";
 
 // Store core files in a cache (including a page to display when offline)
 function updateStaticCache() {
