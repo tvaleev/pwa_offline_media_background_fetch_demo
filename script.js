@@ -1,5 +1,5 @@
-const movieFetchId = "big-buck-bunny";
-const movieUrl = "https://mirror.clarkson.edu/blender/demo/movies/BBB/bbb_sunflower_1080p_60fps_normal.mp4;"
+const movieFetchId = "elephantsdream";
+const movieUrl = "elephantsdream_teaser.mp4"
 const movieSizeInBytes = 355856562;
 const makeOfflineBtn = document.querySelector("#makeOfflineBtn");
 const makeOnlineOnlyBtn = document.querySelector("#makeOnlineOnlyBtn");
