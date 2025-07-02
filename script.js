@@ -108,7 +108,7 @@ async function getOrCreateMovieDownload() {
     title: 'Big Buck Bunny',
     icons: [{
       sizes: '512x512',
-      src: 'https://judahtemp.b-cdn.net/bigbuckbunny512.jpg',
+      src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Big_buck_bunny_poster_big.jpg/500px-Big_buck_bunny_poster_big.jpg',
       type: 'image/jpeg',
     }],
     downloadTotal: movieSizeInBytes,
