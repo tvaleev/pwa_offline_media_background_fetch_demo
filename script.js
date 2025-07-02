@@ -112,10 +112,10 @@ async function getOrCreateMovieDownload() {
   const swReg = await navigator.serviceWorker.ready;
   console.log("creating new fetch");
   const newFetch = await swReg.backgroundFetch.fetch(movieFetchId, [movieUrl], {
-    title: 'Big Buck Bunny',
+    title: 'Elephant',
     icons: [{
-      sizes: '512x512',
-      src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Big_buck_bunny_poster_big.jpg/500px-Big_buck_bunny_poster_big.jpg',
+      sizes: '640x360',
+      src: 'Elephants_Dream_Emo_Proog_s6.jpeg',
       type: 'image/jpeg',
     }],
     downloadTotal: movieSizeInBytes,
