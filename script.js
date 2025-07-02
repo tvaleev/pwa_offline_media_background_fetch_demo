@@ -24,7 +24,7 @@ listenForServiceWorkerBgFetchEvents();
 async function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
     try {
-      const swReg = await navigator.serviceWorker.register('sw.js');
+      const swReg = await navigator.serviceWorker.register('sw_bf.js');
       console.log('ServiceWorker registration successful');
       
       // Wait for the service worker to be fully ready
