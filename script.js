@@ -24,7 +24,7 @@ listenForServiceWorkerBgFetchEvents();
 async function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
     try {
-    const swReg = await navigator.serviceWorker.register('/sw.js')
+    const swReg = await navigator.serviceWorker.register('sw.js')
       swReg.addEventListener('updatefound', function() {
         // If updatefound is fired, it means that there's
         // a new service worker being installed.
