@@ -24,24 +24,27 @@ listenForServiceWorkerBgFetchEvents();
 async function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
     try {
-    const swReg = await navigator.serviceWorker.register('sw.js')
-      swReg.addEventListener('updatefound', function() {
-        // If updatefound is fired, it means that there's
-        // a new service worker being installed.
-        const installingWorker = swReg.installing;
-        console.log('A new service worker is being installed:',  installingWorker);
-
-        // You can listen for changes to the installing service worker's
-        // state via installingWorker.onstatechange
-      });
+      const swReg = await navigator.serviceWorker.register('sw.js');
+      console.log('ServiceWorker registration successful');
+      
+      // Wait for the service worker to be fully ready
+      if (swReg.installing) {
+        await new Promise(resolve => {
+          swReg.installing.onstatechange = function() {
+            if (this.state === 'activated') {
+              resolve();
+            }
+          };
+        });
+      }
+      
+      return swReg; // Return the registration
     } catch (error) {
-      showError("Unable to register service worker: " + error);
+      console.error("ServiceWorker registration failed:", error);
       throw error;
     }
-  } else {
-    showError("Service workers are not supported.");
-    throw new Error("Service workers not supported");
-  } 
+  }
+  throw new Error("Service workers not supported");
 }
 
 async function queryForMovieCacheStatus() {
