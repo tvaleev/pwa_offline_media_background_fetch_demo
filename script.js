@@ -67,6 +67,7 @@ async function makeOfflineClicked() {
   showError(null);
   setLoadingPercentage(0);
   try {
+    console.log("makeOfflineClicked try to fetch");
     const bgFetch = await getOrCreateMovieDownload();
     await bgFetch.responseReady;
   } catch (err) {
@@ -97,6 +98,7 @@ async function getExistingMovieDownload() {
 }
 
 async function getOrCreateMovieDownload() {
+  console.log("getOrCreateMovieDownload");
   const existingFetch = await getExistingMovieDownload();
   if (existingFetch) {
     // See if we already have a download going. If so, use that.
